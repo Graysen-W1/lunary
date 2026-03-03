@@ -7,6 +7,10 @@ Some want an outlet to let off some steam, or write an inspiring idea down; ther
 
 See what Lunary can do for you. While you're writing your thoughts down, you'll be reminded about the moon and its current phase. The moon is calming, a focus for Lunary.
 
+If you're curious, here's what my original sketch looked like for this concept:
+
+<img width="550" height="550" alt="app_inspo!" src="https://github.com/user-attachments/assets/4016faaa-1482-4d7c-9828-dc2c727e9674" />
+
 ## Tech Stack
 - Node.js
 - Express.js
