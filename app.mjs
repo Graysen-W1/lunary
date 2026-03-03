@@ -1,7 +1,7 @@
-// app.mjs
-// Lunary: Your Daily Journal App with Moon Phase Tracking
-// source: ES6 module syntax - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-import 'dotenv/config';
+// <<<<<<< dev
+//app.mjs
+//we are in ES6, use this. 
+import 'dotenv/config'; 
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -12,7 +12,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const uri = process.env.MONGO_URI;
 
-// middleware
 // source: https://expressjs.com/en/starter/static-files.html
 app.use(express.static(join(__dirname, 'public'), { index: false }));
 // source: https://expressjs.com/en/api.html#express.json
@@ -79,13 +78,6 @@ app.get('/api/moon', async (req, res) => {
 });
 
 // health check
-// GET /           -> serves lunary.html
-// GET /api/moon   -> moon phase data
-// POST /api/entry -> create entry
-// GET /api/entries -> all entries
-// GET /api/entry/today -> today's entry
-// PUT /api/entry/:id   -> update entry
-// DELETE /api/entry/:id -> delete entry
 app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', server: 'Lunary', timestamp: new Date().toISOString() });
 });
@@ -210,7 +202,9 @@ app.delete('/api/entry/:id', async (req, res) => {
   }
 });
 
-// this starts the server
+
+//start the server. 
 app.listen(3000, () => {
-  console.log('Lunary is running on http://localhost:3000');
-});
+  console.log('Server is running on http://localhost:3000')
+})
+
