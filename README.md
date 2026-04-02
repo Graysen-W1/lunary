@@ -1,6 +1,6 @@
-# Lunary 🌙 - App Proposal
+# Lunary 🌙 - App Idea
 
-Hey! Welcome to Lunary (lunar + diary). If you haven't been here before, Lunary is a daily journaling app. You get ONE entry per day, so make it count. You can always look back at your past entries for reflection, or maybe to revisit an idea you had at 2am.
+Hey! Welcome to Lunary (lunar + diary), a mini-app I'm continuing to expand on. If you haven't been here before, Lunary is a daily journaling app. You get ONE entry per day, so make it count. You can always look back at your past entries for reflection, or maybe to revisit an idea you had at 2am.
 
 The whole point of Lunary is mental well-being. Life gets busy, but slowing down and writing something, literally anything, can make a difference. You don't need to write a novel. Just something.
 
@@ -9,11 +9,6 @@ Oh, and while you're journaling, you'll see the current moon phase. The moon is 
 If you're curious, here's what my original sketch looked like:
 
 <img width="550" height="550" alt="app_inspo!" src="https://github.com/user-attachments/assets/4016faaa-1482-4d7c-9828-dc2c727e9674" />
-
-
-## App Idea
-
-Lunary is a daily journal web app. One entry per day. You can reflect on past entries and see the moon's current phase while you write. The focus is simplicity and mental well-being, no pressure, just a calm space to write.
 
 ## Target Users
 
