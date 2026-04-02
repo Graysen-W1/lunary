@@ -30,7 +30,14 @@ Lunary is a daily journal web app. One entry per day. You can reflect on past en
 - Deployed on GCP (production) and Render (dev)
 - CI/CD with GitHub Actions
 
-*...new features coming soon... described below...*
+**Planned Features:**
+- Refactored modern Node architecture (`/routes`, `/controllers`, `/models`, `/middleware`)
+- User registration & login with JWT authentication
+- Firebase (Firestore) database integration
+- Redesigned UI/UX with Bootstrap 5, maybe some stars ✨
+- Deployment guides (like GCP, Nginx, PM2, env variables)
+- Debug case study write-up
+- Search functionality for past journal entries
 
 ### Tech Stack
 ---
@@ -54,8 +61,8 @@ Lunary is a daily journal web app. One entry per day. You can reflect on past en
 
 ### Selected = Pathway 1: The Clean Upgrade 🫧
 
-### Milestones [Here]
-### Issues [Here]
+#### Milestones [Here]
+#### Issues [Here]
 
 ## Deployment
 
