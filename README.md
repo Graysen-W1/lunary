@@ -35,7 +35,6 @@ If you're curious, here's what my original sketch looked like:
 - Search functionality for past journal entries
 
 ## Tech Stack
----
 
 | Layer | Tech |
 |-------|------|
