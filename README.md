@@ -61,13 +61,17 @@ Lunary is a daily journal web app. One entry per day. You can reflect on past en
 
 ### Selected = Pathway 1: The Clean Upgrade 🫧
 
-#### Milestones [Here]
-#### Issues [Here]
+- Milestones listed *[Here](https://github.com/Graysen-W1/lunary/milestones)*
+- Issues listed *[Here](https://github.com/Graysen-W1/lunary/issues)*
 
 ## Deployment
 
 - **Production:** https://lunary.barrycumbie.com/
 - **Development:** https://dev-refactored-enigma-devops.onrender.com/
+---
+
+- [X] `Barrycumbie` added as collaborator
+- [X] GCP `student-key` linked
 
 
 ### Thanks for stopping by, Lunary is about to get a whole lot better. 🌙
