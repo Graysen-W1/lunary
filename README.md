@@ -46,7 +46,7 @@
 ### Selected = Pathway 1: The Clean Upgrade 🫧
 
 ### Planned Features:
-- [ ] Refactored modern Node architecture (`/routes`, `/controllers`, `/models`, `/middleware`)
+- [X] Refactored modern Node architecture (`/routes`, `/controllers`, `/models`, `/middleware`)
 - [ ] User registration & login with JWT authentication
 - [ ] Firebase (Firestore) database integration
 - [ ] Redesigned UI/UX with Bootstrap 5, maybe some stars ✨
