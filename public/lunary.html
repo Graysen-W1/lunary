@@ -313,10 +313,21 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <script>
-    // this is a global variable to track if someone is editing today's entry
+    // this is for token verification, and checks if user is logged in. It redirects to login if they're not
+    // source: https://www.w3schools.com/jsref/prop_win_localstorage.asp
+    var token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '/';
+    }
+
+    // source: https://api.jquery.com/jquery.ajaxsetup/
+    $.ajaxSetup({
+      headers: { 'Authorization': 'Bearer ' + token }
+    });
+
     let editingId = null;
 
-    // display today's date
+    // this will display today's date
     // source: https://www.w3schools.com/js/js_dates.asp
     function displayDate() {
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -324,7 +335,7 @@
       $('#todayDate').text(today);
     }
 
-    // load moon phase from server API proxy (FreeAstroAPI)
+    // this loads the moon phase from server API proxy (FreeAstroAPI)
     // source: https://api.jquery.com/jquery.getjson/ (jQuery AJAX)
     // source: https://www.freeastroapi.com/docs/utilities/moon-phase
     function loadMoonPhase() {
@@ -350,7 +361,7 @@
       });
     }
 
-    // if today's entry exists, load it into the form
+    // this checks if today's entry exists and loads it into the form
     // source: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     function loadTodayEntry() {
       $.getJSON('/api/entry/today', function(data) {
@@ -397,7 +408,7 @@
       });
     }
 
-    // load past entries into the modal
+    // this loads in past entries into the modal
     // source: https://www.w3schools.com/js/js_htmldom_html.asp
     function loadPastEntries() {
       $.getJSON('/api/entries', function(entries) {
@@ -423,13 +434,12 @@
       });
     }
 
-    // escape single quotes for inline onclick handlers
     // source: https://www.w3schools.com/jsref/jsref_replace.asp
     function escapeQuotes(str) {
       return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
     }
 
-    // edit an entry from the modal
+    // this edits an entry from the modal
     // source: Blog-Admin script.js edit() pattern
     function editEntry(id, title, content) {
       editingId = id;
@@ -441,7 +451,7 @@
       toast('Editing entry — make changes and click Update.');
     }
 
-    // delete an entry
+    // this deletes an entry
     // source: Blog-Admin script.js remove() pattern
     // https://www.w3schools.com/js/js_popup.asp
     function deleteEntry(id) {
@@ -461,21 +471,21 @@
       });
     }
 
-    // show inline alert message
+    // this shows inline alert message
     // source: https://getbootstrap.com/docs/5.0/components/alerts/
     function showMessage(text, type) {
       $('#message').html('<div class="alert alert-' + type + ' py-2">' + text + '</div>');
       setTimeout(function() { $('#message').html(''); }, 3000);
     }
 
-    // show toast notification
+    // this shows a toast notification
     // source: https://getbootstrap.com/docs/5.0/components/toasts/ (also used in Blog-Admin script.js)
     function toast(msg) {
       $('#toastMessage').text(msg);
       new bootstrap.Toast(document.getElementById('liveToast')).show();
     }
 
-    // initialize page on load
+    // this initializes the page on load
     // source: https://api.jquery.com/ready/
     $(document).ready(function() {
       displayDate();
