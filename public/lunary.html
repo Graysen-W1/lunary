@@ -61,6 +61,39 @@
       border: 1px solid #2a2a4a;
       border-radius: 12px;
       padding: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* rocket and stars svgs */
+    /* source: https://www.w3schools.com/css/css_positioning.asp */
+    /* source: https://www.w3schools.com/cssref/css3_pr_filter.php */
+    .rocket-bg {
+      position: fixed;
+      right: -120px;
+      bottom: -375px;
+      width: 780px;
+      opacity: 0.45;
+      filter: blur(1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* source: https://www.w3schools.com/cssref/css3_pr_transform.php */
+    .stars-bg {
+      position: absolute;
+      top: -130px;
+      right: -10px;
+      width: 320px;
+      opacity: 0.4;
+      filter: blur(1.5px);
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(45deg);
+    }
+
+    .journal-section > *:not(.stars-bg) {
+      position: relative;
+      z-index: 1;
     }
 
     .journal-section h4 {
@@ -243,6 +276,10 @@
     </div>
   </nav>
 
+  <!-- fun rocket svg -->
+  <!-- source: https://www.w3schools.com/html/html_images.asp -->
+  <img src="/img/rocket.svg" alt="" class="rocket-bg">
+
   <!-- main container -->
   <!-- source: https://getbootstrap.com/docs/5.0/layout/containers/ -->
   <div class="container-fluid">
@@ -260,6 +297,10 @@
       <!-- right column for the journal entry -->
       <div class="col-md-8">
         <div class="journal-section">
+          <!-- fun stars svg -->
+          <!-- source: https://www.w3schools.com/html/html_images.asp -->
+          <img src="/img/stars.svg" alt="" class="stars-bg">
+
           <h4>Today's Journal Entry</h4>
           <div id="message"></div>
 

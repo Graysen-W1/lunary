@@ -30,6 +30,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* space cat svg created on Canva */
+    /* source: https://www.w3schools.com/css/css_positioning.asp */
+    .space-cat {
+      position: fixed;
+      top: 53%;
+      right: 7%;
+      width: 840px;
+      opacity: 0.7;
+      z-index: 0;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* source: https://www.w3schools.com/css/css3_animations.asp */
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%); }
+      50% { transform: translateY(calc(-50% - 18px)); }
     }
 
     /* source: https://getbootstrap.com/docs/5.0/components/navbar/ */
@@ -106,6 +127,19 @@
 </head>
 <body>
 
+  <!-- source: https://getbootstrap.com/docs/5.0/components/navbar/ -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <span class="navbar-brand">
+        <i class="bi bi-moon-stars-fill"></i> Lunary
+      </span>
+    </div>
+  </nav>
+
+  <!-- source: https://www.w3schools.com/html/html_images.asp -->
+  <img src="/img/space-cat.svg" alt="" class="space-cat">
+
+  <div class="auth-wrapper">
   <!-- source: https://getbootstrap.com/docs/5.0/layout/containers/ -->
   <div class="container">
     <div class="row justify-content-center">
@@ -139,8 +173,9 @@
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- bootstrap 5 js - source: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+  <!-- bootstrap 5 js source: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- jQuery - source: literate-fortnight-yar projects.html -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
